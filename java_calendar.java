@@ -2,17 +2,20 @@ import java.util.Scanner;
 
 public class java_calendar {
     public static void main(String[] args) {
-        // System.out.println("일 월 화 수 목 금 토");
-        // System.out.println("--------------------");
-        // System.out.println(" 1  2  3  4  5  6  7");
-        // System.out.println(" 8  9 10 11 12 13 14");
-        // System.out.println("15 16 17 18 19 20 21");
-        // System.out.println("22 23 24 25 26 27 28");
-        System.out.println("달을 입력하세요.");
+        System.out.println("반복횟수를 입력하세요.");
         Scanner scan = new Scanner(System.in);
-        int number = scan.nextInt();
+        int count = scan.nextInt();
 
-        System.out.println(number + "월은 " + Monthdate.date(number) + "일까지 있습니다.");
+        System.out.println("월을 입력하세요.");
+        int[] num = new int[count];
+        for(int i = 0; i < count; i++){
+            num[i] = scan.nextInt();
+        }
+        for(int k =0; k < count; k++){
+            System.out.println(num[k] + "은" + Monthdate.date(num[k]) + "까지 있습니다.");
+        }
+        Printsamplecalendar.printcalender();
+        
         scan.close();
     }
     

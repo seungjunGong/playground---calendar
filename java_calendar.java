@@ -10,11 +10,9 @@ public class java_calendar {
         // System.out.println("22 23 24 25 26 27 28");
         System.out.println("달을 입력하세요.");
         Scanner scan = new Scanner(System.in);
-        String number = scan.nextLine();
+        int number = scan.nextInt();
 
-        int num = Integer.parseInt(number);
-
-        System.out.println(num + "월은 " + Monthdate.date(num) + "일까지 있습니다.");
+        System.out.println(number + "월은 " + Monthdate.date(number) + "일까지 있습니다.");
         scan.close();
     }
     

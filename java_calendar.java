@@ -5,13 +5,17 @@ public class java_calendar {
         String  PROMPT= ">";
         Scanner scan = new Scanner(System.in);
         while(true){
+            System.out.println("년을 입력하세요.");
+            System.out.print(PROMPT);
+            int year = scan.nextInt();
             System.out.println("월을 입력하세요.");
             System.out.print(PROMPT);
-            int num = scan.nextInt();
-            Printsamplecalendar.printcalender(num);
-            if(num == -1){
+            int month = scan.nextInt();
+            
+            if(month == -1){
                 break;
             }
+            Printcalendar.printcalender(year, month);
         }
         System.out.println("Bye~");
         

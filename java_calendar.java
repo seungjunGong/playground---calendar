@@ -16,8 +16,7 @@ public class java_calendar {
         int num1 = Integer.parseInt(num[0]);
         int num2 = Integer.parseInt(num[1]);
 
-        int add = num1 + num2;
-        System.out.println("두 수의 합은 " + add + "입니다.");
+        System.out.println("두 수의 합은 " + Add.sum(num1, num2) + "입니다.");
         scan.close();
     }
     

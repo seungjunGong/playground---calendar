@@ -5,15 +5,18 @@ public class java_calendar {
         System.out.println("반복횟수를 입력하세요.");
         Scanner scan = new Scanner(System.in);
         int count = scan.nextInt();
-
-        System.out.println("월을 입력하세요.");
-        int[] num = new int[count];
+        String  PROMPT= ">";
+        
         for(int i = 0; i < count; i++){
-            num[i] = scan.nextInt();
+            System.out.println("월을 입력하세요.");
+            System.out.print(PROMPT);
+            int num = scan.nextInt();
+            if(num == -1){
+                break;
+            }
+            System.out.println(num + "은" + Monthdate.date(num) + "까지 있습니다.");
         }
-        for(int k =0; k < count; k++){
-            System.out.println(num[k] + "은" + Monthdate.date(num[k]) + "까지 있습니다.");
-        }
+        System.out.println("Have a nice day!");
         Printsamplecalendar.printcalender();
         
         scan.close();
